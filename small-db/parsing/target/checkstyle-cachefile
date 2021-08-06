@@ -1,0 +1,9 @@
+#Wed Jun 23 23:13:51 EDT 2021
+configuration*?=6BF875DCB870FA3DF4CE297ECD9442262B07B073
+/Users/justinkwan/Documents/work/starburst/small-db/parsing/src/main/java/org/smalldb/parser/SqlParseFilter.java=1624421667270
+/Users/justinkwan/Documents/work/starburst/small-db/parsing/src/main/java/org/smalldb/parser/SqlTokenizer.java=1624501631304
+/Users/justinkwan/Documents/work/starburst/small-db/parsing/src/main/java/org/smalldb/syntax/SqlExpression.java=1624501643546
+/Users/justinkwan/Documents/work/starburst/small-db/parsing/src/main/java/org/smalldb/syntax/SqlBinaryOperator.java=1624423416625
+/Users/justinkwan/Documents/work/starburst/small-db/parsing/src/main/java/org/smalldb/syntax/AstNode.java=1624423620389
+/Users/justinkwan/Documents/work/starburst/small-db/parsing/src/main/java/org/smalldb/parser/SqlParser.java=1624501639288
+/Users/justinkwan/Documents/work/starburst/small-db/parsing/src/main/java/org/smalldb/syntax/SqlOperator.java=1624422620055

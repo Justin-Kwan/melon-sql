@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="/Users/justinkwan/Documents/work/starburst/small-db/parsing/src/main/java/org/smalldb/Main.java">
+<error line="3" column="8" severity="error" message="Unused import - org.antlr.v4.runtime.CharStream." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="4" column="8" severity="error" message="Unused import - org.antlr.v4.runtime.CharStreams." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="5" column="8" severity="error" message="Unused import - org.antlr.v4.runtime.CommonTokenStream." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="9" column="1" severity="error" message="Utility classes should not have a public or default constructor." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+<error line="10" severity="error" message="Blank line after opening brace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+</file>
+</checkstyle>
