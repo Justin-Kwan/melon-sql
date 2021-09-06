@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="/Users/justin/Documents/apps/melon-sql/small-db/storage/src/main/java/org/smalldb/page/Tuple.java">
+</file>
+<file name="/Users/justin/Documents/apps/melon-sql/small-db/storage/src/main/java/org/smalldb/page/BooleanTuple.java">
+<error line="3" column="8" severity="error" message="Unused import - com.google.common.collect.ImmutableList." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="6" column="8" severity="error" message="Unused import - java.util.Arrays." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="/Users/justin/Documents/apps/melon-sql/small-db/storage/src/main/java/org/smalldb/page/TupleValue.java">
+<error line="20" severity="error" message="Blank line after opening brace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+<error line="20" severity="error" message="Blank line before closing brace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+</file>
+<file name="/Users/justin/Documents/apps/melon-sql/small-db/storage/src/main/java/org/smalldb/memory/BufferPool.java">
+<error line="33" severity="error" message="Blank line after opening brace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+<error line="33" severity="error" message="Blank line before closing brace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+</file>
+<file name="/Users/justin/Documents/apps/melon-sql/small-db/storage/src/main/java/org/smalldb/disk/BufferedTupleOutputStream.java">
+<error line="3" column="8" severity="error" message="Unused import - org.apache.hadoop.hive.common.io.encoded.EncodedColumnBatch." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="4" column="8" severity="error" message="Unused import - org.apache.orc.OrcFile." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="5" column="8" severity="error" message="Unused import - org.apache.orc.impl.OutStream." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="6" severity="error" message="Not null is the default for the codebase and should not be annotated" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+<error line="6" column="8" severity="error" message="Unused import - org.jetbrains.annotations.NotNull." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="7" column="8" severity="error" message="Unused import - org.smalldb.page.Tuple." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="9" column="8" severity="error" message="Unused import - java.io.DataOutput." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="10" column="8" severity="error" message="Unused import - java.io.FilterOutputStream." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="11" column="8" severity="error" message="Unused import - java.io.IOException." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="12" column="8" severity="error" message="Unused import - java.io.OutputStream." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="13" column="8" severity="error" message="Unused import - java.nio.ByteBuffer." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="/Users/justin/Documents/apps/melon-sql/small-db/storage/src/main/java/org/smalldb/orc/BooleanColumnWriter.java">
+<error line="3" column="8" severity="error" message="Unused import - org.smalldb.page.Tuple." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="4" column="8" severity="error" message="Unused import - org.smalldb.page.TupleValue." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+<file name="/Users/justin/Documents/apps/melon-sql/small-db/storage/src/main/java/org/smalldb/orc/OrcWriter.java">
+<error line="3" column="8" severity="error" message="Unused import - org.apache.orc.CompressionCodec." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="4" column="8" severity="error" message="Unused import - org.apache.orc.impl.WriterImpl." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="5" column="8" severity="error" message="Unused import - org.smalldb.page.Chunker." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="11" severity="error" message="Blank line after opening brace" source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpMultilineCheck"/>
+</file>
+<file name="/Users/justin/Documents/apps/melon-sql/small-db/storage/src/main/java/org/smalldb/orc/PageSerde.java">
+<error line="3" column="8" severity="error" message="Unused import - org.apache.hadoop.hive.ql.exec.vector.BytesColumnVector." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="6" column="8" severity="error" message="Unused import - org.smalldb.page.Tuple." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="7" column="8" severity="error" message="Unused import - org.smalldb.page.TupleValue." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+</file>
+</checkstyle>

@@ -22,7 +22,7 @@ public class TestTuple
             BooleanTuple tupleChunk = TEST_BOOLEAN_TUPLE.chunk(0, 2);
 
             assertThat(tupleChunk.getValueRange())
-                    .isEqualToComparingFieldByField(new Tuple.ValueRange(0, 2));
+                    .isEqualTo(new Tuple.ValueRange(0, 2));
 
             assertThat(tupleChunk.getValues())
                     .isEqualTo(TEST_BOOLEAN_TUPLE.getValues());

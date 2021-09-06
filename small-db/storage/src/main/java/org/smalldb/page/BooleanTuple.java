@@ -72,7 +72,7 @@ public class BooleanTuple
     @Override
     public int getLength()
     {
-        return 0;
+        return values.length;
     }
 
     // TODO: fix

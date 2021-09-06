@@ -24,27 +24,29 @@ public class OrcPageWriter
     private final PageSerde pageSerializer;
     private final Writer orcFileWriter;
 
-    public OrcPageWriter(Options options, PageSerde pageSerializer)
+    public OrcPageWriter(Options options, PageSerde pageSerializer, Writer orcFileWriter)
             throws IOException
     {
         this.options = requireNonNull(options, "options is null");
         this.pageSerializer = requireNonNull(pageSerializer, "pageSerializer is null");
-        this.orcFileWriter = createOrcFileWriter(options);
+        this.orcFileWriter = requireNonNull(orcFileWriter, "orcFileWriter is null");
 //        WriterImpl
     }
 
-    private static Writer createOrcFileWriter(Options options)
+    private static OrcPageWriter create(Options options, PageSerde pageSerializer)
             throws IOException
     {
-        Configuration conf = new Configuration();
+        Configuration orcConfig = new Configuration();
         TypeDescription schema = TypeDescription.fromString("struct<is_new:boolean>");
 
         LocalFileSystem fs = new LocalFileSystem();
-        fs.initialize(URI.create("file:///"), conf);
+        fs.initialize(URI.create("file:///"), orcConfig);
 
-        return OrcFile.createWriter(
+        Writer orcFileWriter = OrcFile.createWriter(
                 new Path("my-file.orc"),
-                OrcFile.writerOptions(conf).setSchema(schema).fileSystem(fs));
+                OrcFile.writerOptions(orcConfig).setSchema(schema).fileSystem(fs));
+
+        return new OrcPageWriter(options, pageSerializer, orcFileWriter);
     }
 
     // size of each chunk is minimum between max parquet row groups
@@ -56,7 +58,7 @@ public class OrcPageWriter
             return;
         }
 
-        Chunker<Page> chunker = new Chunker<>(0, page);
+        Chunker<Page> chunker = new Chunker<>(0, 5, page);
 
         // write the tuple to buffer (need to know the type). Flush the buffer.
         while (chunker.hasNext()) {

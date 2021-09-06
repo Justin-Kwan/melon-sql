@@ -1,5 +1,6 @@
 package org.smalldb.memory;
 
+import org.smalldb.concurrency.LatchableResource;
 import org.smalldb.page.Page;
 import org.smalldb.page.PageId;
 
@@ -7,15 +8,17 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class BufferPool
+        implements LatchableResource
 {
     private final Page[] pages;
     private final int pageCount;
-    private final ReadWriteLock pagesLatch = new ReentrantReadWriteLock();
+    private final ReadWriteLock pagesLatch;
 
     public BufferPool(int pageCount)
     {
         this.pages = new Page[pageCount];
         this.pageCount = pageCount;
+        this.pagesLatch = new ReentrantReadWriteLock();
     }
 
     public Page createPage(PageId pageId)
@@ -31,7 +34,6 @@ public class BufferPool
 
     public void insertPage(Page page)
     {
-
     }
 
     interface ReplacementPolicy
@@ -45,6 +47,30 @@ public class BufferPool
 //        Unpin(frame_id_t frame_id)
 //
 //        Size()
+    }
+
+    @Override
+    public void latchRead()
+    {
+        this.pagesLatch.readLock().lock();
+    }
+
+    @Override
+    public void unlatchRead()
+    {
+        this.pagesLatch.readLock().unlock();
+    }
+
+    @Override
+    public void latchWrite()
+    {
+        this.pagesLatch.writeLock().lock();
+    }
+
+    @Override
+    public void unlatchWrite()
+    {
+        this.pagesLatch.writeLock().unlock();
     }
 
     public Page readPage(PageId id)
